@@ -40,20 +40,22 @@ git clone https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity.
 
 # Required Files
 
-* **Gene Set File (.gmt/.txt/.tsv/.RData):**
-  * This is the file that contains the gene set names and genes for each gene set.
-  * I provide example gene sets from publicly available sources here: https://github.com/shawlab-moffitt/DRPPM-PATH-SURVIOER-Pipeline/tree/main/Example_GeneSets
-    * These include the Molecular Signatures Database, LINCS L1000 small molecule perturbations, and ER Stress Signatures.
-  * An .RData list is the preferred format which is a named list of gene sets and genes. A script to generate this list is provided here: [GeneSetRDataListGen.R](https://github.com/shawlab-moffitt/DRPPM-SURVIVE/blob/main/GeneSet_Data/GeneSetRDataListGen.R)
-    * The app also accepts gene sets in .gmt format or two-column tab-delimited .tsv/.txt format with the first column being the gene set name repeating for every gene symbol that would be placed in the second column. If either of these three formats are given athe app with automatically convert them to an RData list.
-    * If no Gene Set File is provided, the analysis can still run if tyhe user only plans to rank on a gene level
-  * I have provided duiplicate gene sets in both RData and txt file types
-    
-* **Gene Set .lst File (.lst) (OPTIONAL):**
-  * In the case the user would like to run the pipeline with multiple gene set files, the user can provide a two column file containing the gene set name in the first column and the path to the gene set file in the second column.
-  * The gene set files listed should follow the format described above.
+* **Comprehensive Gene Set File:**
+  * This is a provided file [Comprehensive_GeneSet.RData](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/GeneSet_Data/Comprehensive_GeneSet.RData)
+  * This is for use in the back end and provides the genes for the gene sets that are input.
+  * The gene set names should match the ones provdide when running the DRPPM-PATH-SURVIOER-Pipeline
+    * If you ran the pipeline with a user provided gene set the genes for those gene sets will unlikely be found to compare distance between gene sets.
+
+* **User Provided List of Gene Sets:**
+  * This input should be a subset of the table that was output from the [DRPPM-PATH-SURVIOER-Pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVIOER-Pipeline)
+  * It is recommended to take the top 50-1000 number of significant and high-risk gene sets (rows) from the comprehensive table that is output from the pipeline
+    * The table should be pre filtered to have gene sets with a hazard ratio > 1 and a P.value < 0.05.
+  * Please note that large input files will take longer for the app to process
 
 # App Set-Up
+
+* It is important to ensure that the comprehensive gene set file that is provided is in the propper location for the app to locate it when running.
+* If the [Installation Section](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity#installation) is followed properly there should be no issue.
 
 # App Features
 
