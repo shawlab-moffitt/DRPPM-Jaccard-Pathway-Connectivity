@@ -280,53 +280,62 @@ server <- function(input, output, session) {
     gs.u <- input$UserPathwayFile
     ext <- tools::file_ext(gs.u$datapath)
     req(gs.u)
-    validate(need(ext == c("gmt","tsv","txt", "RData"), "Please upload .gmt, .tsv, .txt, or .RData file"))
+    #validate(need(ext == c("gmt","tsv","txt", "RData"), "Please upload .gmt, .tsv, .txt, or .RData file"))
+    validate(need(ext == c("tsv","txt"), "Please upload .tsv or .txt file"))
     
-    # If user provides GMT file
-    if (ext == "gmt") {
-      gmt <- read.gmt(gs.u$datapath)
-      colnames(gmt) <- c("term","gene")
-      gs_u <- list()
-      for (i in unique(gmt[,1])){
-        gs_u[[i]] <- gmt[gmt[,1] == i,]$gene
-      }
-    }
     
-    # If user provides RData list file
-    else if (ext == "RData") {
-      gs_u <- loadRData(gs.u$datapath)
-    }
+    gmt <- as.data.frame(read_delim(gs.u$datapath, delim = '\t', col_names = header_check))
     
-    # If user provides tab-delim two-col file
-    else if (ext == "txt" | ext == "tsv") {
-      
-      gmt <- as.data.frame(read_delim(gs.u$datapath, delim = '\t', col_names = header_check))
-      
-      if (ncol(gmt) == 1) {
-        
-        paths <- as.vector(gmt[,1])
-        paths <- gsub("[[:punct:]]",".",paths)
-        gs_u <- gs[unique(paths)]
-        
-      }
-      else if (ncol(gmt) == 2) {
-        
-        colnames(gmt) <- c("term","gene")
-        gs_u <- list()
-        for (i in unique(gmt[,1])){
-          gs_u[[i]] <- gmt[gmt[,1] == i,]$gene
-        }
-        
-      }
-      else if (ncol(gmt) > 2) {
-        
-        paths <- as.vector(gmt[,1])
-        paths <- gsub("[[:punct:]]",".",paths)
-        gs_u <- gs[unique(paths)]
-        
-      }
-      
-    }
+    paths <- as.vector(gmt[,1])
+    paths <- gsub("[[:punct:]]",".",paths)
+    gs_u <- gs[unique(paths)]
+    gs_u <- Filter(Negate(is.null), gs_u)
+    
+    ## If user provides GMT file
+    #if (ext == "gmt") {
+    #  gmt <- read.gmt(gs.u$datapath)
+    #  colnames(gmt) <- c("term","gene")
+    #  gs_u <- list()
+    #  for (i in unique(gmt[,1])){
+    #    gs_u[[i]] <- gmt[gmt[,1] == i,]$gene
+    #  }
+    #}
+    #
+    ## If user provides RData list file
+    #else if (ext == "RData") {
+    #  gs_u <- loadRData(gs.u$datapath)
+    #}
+    #
+    ## If user provides tab-delim two-col file
+    #else if (ext == "txt" | ext == "tsv") {
+    #  
+    #  gmt <- as.data.frame(read_delim(gs.u$datapath, delim = '\t', col_names = header_check))
+    #  
+    #  if (ncol(gmt) == 1) {
+    #    
+    #    paths <- as.vector(gmt[,1])
+    #    paths <- gsub("[[:punct:]]",".",paths)
+    #    gs_u <- gs[unique(paths)]
+    #    
+    #  }
+    #  else if (ncol(gmt) == 2) {
+    #    
+    #    colnames(gmt) <- c("term","gene")
+    #    gs_u <- list()
+    #    for (i in unique(gmt[,1])){
+    #      gs_u[[i]] <- gmt[gmt[,1] == i,]$gene
+    #    }
+    #    
+    #  }
+    #  else if (ncol(gmt) > 2) {
+    #    
+    #    paths <- as.vector(gmt[,1])
+    #    paths <- gsub("[[:punct:]]",".",paths)
+    #    gs_u <- gs[unique(paths)]
+    #    
+    #  }
+    #  
+    #}
     
     gs_u
     
