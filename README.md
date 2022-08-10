@@ -73,17 +73,29 @@ git clone https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity.
 
 ###   Pathway and Clustering Parameters
 
+![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_Sidebar1.png?raw=true)
+
 ### Figure Parameters
+
+![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_Sidebar2.png?raw=true)
 
 ## Main Panel
 
 ### Jaccard Pathway Connectivity Table
 
+![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_MainTable.png?raw=true)
+
 ### Connectivity Heatmap
+
+![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_heatmap.png?raw=true)
 
 ### Clustering
 
+![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_clustering.png?raw=true)
+
 ### Clustering Annotation
+
+![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_annotation.png?raw=true)
 
 # Quesions and Comments
 
