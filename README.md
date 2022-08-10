@@ -52,18 +52,38 @@ git clone https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity.
   * The gene set names should match the ones provdide when running the DRPPM-PATH-SURVIOER-Pipeline
     * If you ran the pipeline with a user provided gene set the genes for those gene sets will unlikely be found to compare distance between gene sets.
 
-* **User Provided List of Gene Sets:**
-  * This input should be a subset of the table that was output from the [DRPPM-PATH-SURVIOER-Pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVIOER-Pipeline)
+* **User Provided List of Gene Sets (.txt/.tsv):**
+  * The only requirements for the file is that it it tab delimited and teh first column is the list of gene sets. 
+    * The file will work if there is only one column or multiple, the app will only use the first column
+  * This input should be a subset of the table that was output from the [DRPPM-PATH-SURVIOER-Pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline)
   * It is recommended to take the top 50-1000 number of significant and high-risk gene sets (rows) from the comprehensive table that is output from the pipeline
     * The table should be pre filtered to have gene sets with a hazard ratio > 1 and a P.value < 0.05.
-  * Please note that large input files will take longer for the app to process
+    * Please note that large input files will take longer for the app to process
+  * Example Input files are provided [here](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/tree/main/Example_File_Inputs), these are files that were ouput from the example run of the [DRPPM-PATH-SURVIOER-Pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline) with the 50 MSigDB Hallmark Gene sets, with and without the use of the "Responder" covariate.
 
 # App Set-Up
 
-* It is important to ensure that the comprehensive gene set file that is provided is in the propper location for the app to locate it when running.
-* If the [Installation Section](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity#installation) is followed properly there should be no issue.
+* It is important to ensure that the comprehensive gene set file that is provided is in the proper location for the app to locate it when running.
+  * If the [Installation Section](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity#installation) is followed properly there should be no issue.
+* When the app is running the user can select to input a file in the user interface and proceed with analysis
 
 # App Features
+
+## Sidebar Panel
+
+###   Pathway and Clustering Parameters
+
+### Figure Parameters
+
+## Main Panel
+
+### Jaccard Pathway Connectivity Table
+
+### Connectivity Heatmap
+
+### Clustering
+
+### Clustering Annotation
 
 # Quesions and Comments
 
