@@ -75,9 +75,17 @@ git clone https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity.
 
 ![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_Sidebar1.png?raw=true)
 
+1. The user may pload their pathways of interest here
+2. The user has the ability to choose which clustering method they want to use for the hclust() function, as well as the number of clusters they want to form with their data
+3. A distance cutoff can be used input to generate a SIF file that can be downloaded (4) into a further application by the user. All gene set pair below the designated cutoff will be included in the file.
+
 ### Figure Parameters
 
 ![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_Sidebar2.png?raw=true)
+
+1. Figure parameter for theheatmap may be adjusted, such as color palette, column and row names, and dendrogram height.
+2. The connectivity visualization can be customized to be viewed as a rectangular or circular denrogram or a phylogeny figure. 
+    * If phylogeny is chosen a veriety of options to view the phylogeny figure as is provided.
 
 ## Main Panel
 
