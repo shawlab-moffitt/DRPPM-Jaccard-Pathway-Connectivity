@@ -93,17 +93,32 @@ git clone https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity.
 
 ![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_MainTable.png?raw=true)
 
+1. When a file is uploaded to the app, after a few moments a Jaccard Connectivity able will appear showing the jaccard distance, 0-1, (similarity) between gene sets
+    * The smaller the number, the more similar the gene set
+2. The table can be downloaded for further use
+
 ### Connectivity Heatmap
 
 ![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_heatmap.png?raw=true)
+
+1. The heatmap give a global picture of similarit between gene sets
 
 ### Clustering
 
 ![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_clustering.png?raw=true)
 
+1. Clustering can be shown as a phylogenetic object, with or without names displyed. The names can be displayed also by hovering the points
+    * The visualization is a plotly object, so the user may zoom in to interact with the plot
+2. A dendrogram is another form of visualization available to see the clustering. This is also made with plotly, so the user may zoom in to examine the branches
+3. The clusters can also be viewed as a circular dendrogram. This is not a plotly object and can not be interacted with.
+
 ### Clustering Annotation
 
 ![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_annotation.png?raw=true)
+
+* A data frame is displayed on the last tab starting with the gene set, cluster, and gene for each row. This allows users to see what genes are in the gene sets and cluster
+1. A table provided by the user can be uploaded to annotate the genes. The uploaded table must list the gene symbol in the firsst column, the corresponding column can be any annotation the user chooses.
+    * It is recommended to use the input from the DRPPM-PATH-SURVEIOR Pipeline raw gene expresison ranking output.
 
 # Quesions and Comments
 
