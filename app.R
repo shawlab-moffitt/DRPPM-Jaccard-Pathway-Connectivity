@@ -349,7 +349,7 @@ server <- function(input, output, session) {
     validate(need(ext == c("tsv","txt","csv"), "Please upload .tsv, .txt, or .csv file"))
     if (ext == "txt" | ext == "tsv") {
       
-      df <- as.data.frame(read_delim(gs.u$datapath, delim = '\t', col_names = T))
+      df <- as.data.frame(read_delim(gs.u$datapath, delim = '\t', col_names = T, comment = "##"))
       
     }
     else if (ext == "csv") {
