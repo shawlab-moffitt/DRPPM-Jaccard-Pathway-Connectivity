@@ -6,6 +6,8 @@ The integration of patient genome expression data, phenotypye data, and clinical
 
 Here we focus on the Pathway Connectivity portion of this workflow with the DRPPM-Jaccard-Pathway-Connectivity R Shiny App. This app takes a list of gene sets as input and performs a Jaccard distance calculation to determine the proximity on the gene sets to one another. Working in tandem with the [DRPPM-PATH-SURVEIOR pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline), the user may subset a top portion of the gene sets that were output from the comprehensive Cox Proportional Hazard table and use that as input to the Jaccard Connectivity app. This allows the user to gain another perspective on the top gene sets identified and how they cluster together by utilizing visualiztions of heatmaps, dendrograms, and phylogeny-type branched outputs.
 
+An example Jaccard Connectivity R Shiny App is hosted here: http://shawlab.science/shiny/DRPPM_PATH_SURVEIOR_Jaccard_Connectivity_App/ where you are welcome to use the example inputs provided in the GitHub or your own to explore.
+
 ![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/FlowChart_PathwayConnectivity.png?raw=true)
 
 # Installation
