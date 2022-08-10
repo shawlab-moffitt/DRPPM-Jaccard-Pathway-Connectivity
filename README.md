@@ -74,6 +74,9 @@ git clone https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity.
 
 * It is important to ensure that the comprehensive gene set file that is provided is in the proper location for the app to locate it when running.
   * If the [Installation Section](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity#installation) is followed properly there should be no issue.
+* To run the app:
+  * The user can select the "Run App" button at the top write of the script in R Studio
+  * Or the user can user the runApp() function in R Console
 * When the app is running the user can select to input a file in the user interface and proceed with analysis
 
 # App Features
