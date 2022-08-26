@@ -69,13 +69,13 @@ git clone https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity.
   * Example Input files are provided [here](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/tree/main/Example_File_Inputs), these are files that were ouput from the example run of the [DRPPM-PATH-SURVIOER-Pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline) with the 50 MSigDB Hallmark Gene sets, with and without the use of the "Responder" covariate.
   
  * **Gene Annotation File (Optional):**
-  * A tab delimited file with gene symbols as the first column followed by annotation columns 
-  * It is recommended to use the output from the raw gene expression run of the [DRPPM-PATH-SURVEIOR pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline)
-    * Though any file where the first column is gene symbols will do
-    * An example file from a raw gene expression run of the DRPPM-PATH-SURVEIOR pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline) with the PAN ICI iAtlas Skin Cancer data to use for input can be found here: [Pan_ICI_iAtlas_Skin_OS_Genes_coxh_ranked_ForAnnotationInput.txt](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/Example_File_Inputs/Pan_ICI_iAtlas_Skin_OS_Genes_coxh_ranked_ForAnnotationInput.txt)
-  * There is a table that can be used for annotation of genes by the user in the "Gene Clusters and Annotation" tab
-  * This starts as a three column tables of gene set names and clusters repeating for each gene within the gene set
-    * The annotation file uploaded will merge the two tables by gene symbol
+   * A tab delimited file with gene symbols as the first column followed by annotation columns 
+   * It is recommended to use the output from the raw gene expression run of the [DRPPM-PATH-SURVEIOR pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline)
+     * Though any file where the first column is gene symbols will do
+     * An example file from a raw gene expression run of the DRPPM-PATH-SURVEIOR pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline) with the PAN ICI iAtlas Skin Cancer data to use for input can be found here: [Pan_ICI_iAtlas_Skin_OS_Genes_coxh_ranked_ForAnnotationInput.txt](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/Example_File_Inputs/Pan_ICI_iAtlas_Skin_OS_Genes_coxh_ranked_ForAnnotationInput.txt)
+   * There is a table that can be used for annotation of genes by the user in the "Gene Clusters and Annotation" tab
+   * This starts as a three column tables of gene set names and clusters repeating for each gene within the gene set
+     * The annotation file uploaded will merge the two tables by gene symbol
 
 # App Set-Up
 
