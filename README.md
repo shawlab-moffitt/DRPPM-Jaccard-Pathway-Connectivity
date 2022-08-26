@@ -55,19 +55,17 @@ git clone https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity.
 
 # Required Files
 
-* **Comprehensive Gene Set File:**
+* **Comprehensive Gene Set File (Provided):**
   * This is a provided file [Comprehensive_GeneSet.RData](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/GeneSet_Data/Comprehensive_GeneSet.RData)
   * This is for use in the back end and provides the genes for the gene sets that are input.
   * The gene set names should match the ones provdide when running the DRPPM-PATH-SURVIOER-Pipeline
     * If you ran the pipeline with a user provided gene set the genes for those gene sets will unlikely be found to compare distance between gene sets.
 
 * **User Provided List of Gene Sets (.txt/.tsv):**
-  * The only requirements for the file is that it it tab delimited and teh first column is the list of gene sets. 
-    * The file will work if there is only one column or multiple, the app will only use the first column
-  * This input should be a subset of the table that was output from the [DRPPM-PATH-SURVIOER-Pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline)
-  * It is recommended to take the top 50-1000 number of significant and high-risk gene sets (rows) from the comprehensive table that is output from the pipeline
-    * The table should be pre filtered to have gene sets with a hazard ratio > 1 and a P.value < 0.05.
-    * Please note that large input files will take longer for the app to process
+  * The only requirements for the file is that it it tab delimited and the first column is the gene set names. 
+    * The app will only use the first column, and ignore other columns
+  * This can take the ranked Coxh file that is output from the [DRPPM-PATH-SURVIOER-Pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline)
+    * The user can subset this file for the top number of gene sets in the app
   * Example Input files are provided [here](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/tree/main/Example_File_Inputs), these are files that were ouput from the example run of the [DRPPM-PATH-SURVIOER-Pipeline](https://github.com/shawlab-moffitt/DRPPM-PATH-SURVEIOR-Pipeline) with the 50 MSigDB Hallmark Gene sets, with and without the use of the "Responder" covariate.
   
  * **Gene Annotation File (Optional):**
@@ -96,9 +94,17 @@ git clone https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity.
 
 ![alt text](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity/blob/main/App_Pictures/Jaccard_Conn_Sidebar1.png?raw=true)
 
-1. The user may pload their pathways of interest here
-2. The user has the ability to choose which clustering method they want to use for the hclust() function, as well as the number of clusters they want to form with their data
-3. A distance cutoff can be used input to generate a SIF file that can be downloaded (4) into a further application by the user. All gene set pair below the designated cutoff will be included in the file.
+1. The user may upload their pathways of interest here
+   * Please select if the file has a header or not
+   * Input file described [here](https://github.com/shawlab-moffitt/DRPPM-Jaccard-Pathway-Connectivity#required-files)
+2. The user can select the top number of gene sets to view from the input file
+   * This takes the top number of rows from the file to perform the Jaccard Connectivity on
+   * While the Jaccard calculation should not take long, the larger the subset the more time the Jaccard Connectivity will take to process
+3. The user has the ability to choose which clustering method they want to use from the hclust() function, as well as the number of clusters they want to form with their data
+   * The cluster table can be viewed in the app, as well as downloaded
+4. A distance cutoff can be used input to generate a SIF file
+   * All gene set pairs below the designated cutoff will be included in the file
+   * This file can be previewed in the app as well as downloaded
 
 ### Figure Parameters
 
